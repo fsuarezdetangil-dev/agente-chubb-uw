@@ -7,15 +7,17 @@ PoC del P&C Underwriting Agent para Chubb EMEA. Agente LangGraph combinado agén
 - Python 3.11+
 - LangGraph (orquestación del agente)
 - LangChain (integración de herramientas y LLM)
-- LangSmith (observabilidad y evaluación)
+- Arize Phoenix (observabilidad y trazabilidad — reemplazó a LangSmith)
+- LangSmith (solo harness de evaluación — `evals/evaluators.py`)
 - ChromaDB (vector store local para PoC)
-- Anthropic API — modelo `claude-sonnet-4-6`
+- Azure OpenAI — deployment `gpt4o` (configurado en `.env`)
 
 ## Comandos de arranque
 ```bash
 pip install -r requirements.txt
-python observability/langsmith/setup_langsmith.py
-python backend/agent/graph.py   # cuando exista (Fase 2+)
+python scripts/run_e2e.py            # pasada completa 72 submissions
+python scripts/run_phoenix_eval.py   # experimento con métricas en Phoenix
+python backend/agent/graph.py        # smoke test del grafo
 ```
 
 ## Convenciones

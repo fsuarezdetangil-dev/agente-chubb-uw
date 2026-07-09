@@ -13,11 +13,11 @@
 | **Fase 3D** | Node 4 Risk Assessment + HITL-2 y HITL-3 + pricing stub v2 RAG | **COMPLETADA 2026-06-30** |
 | **Fase 3E** | Node 5 Output Generation + Reflection pattern | **COMPLETADA 2026-06-30** |
 | **Fase E2E** | Pasada completa 72 submissions — métricas CA-01 a CA-08 | **COMPLETADA 2026-07-04 — 6/8 CA cumplen umbral (ver SESSION_LOG.md, experimento chubb-uw-e2e-d1881dca)** |
-| Fase 4 | Golden dataset + evals + LangSmith evaluators | **COMPLETADA 2026-07-04 — LangSmith conectado (cuenta Nicolás, proyecto agente-chubb-uw-nicolas, endpoint EU), dataset chubb-uw-golden-72 subido. Experimentos publicados: chubb-uw-e2e-80b0e41d (2026-07-02), chubb-uw-e2e-d7973ef5 (2026-07-02), chubb-uw-e2e-d1881dca (2026-07-04, pasada final)** |
+| Fase 4 | Golden dataset + evals + evaluators | **COMPLETADA 2026-07-04 — dataset chubb-uw-golden-72 creado. Observabilidad migrada a Arize Phoenix (2026-07-06). Baseline `e2e-v1-baseline-traced` publicado en Phoenix Datasets & Experiments (68/72 runs, trace_id enlazado).** |
 | Fase 5 | Demo preparación + presentación Chubb EMEA | PENDIENTE |
 | Fase 6 | ~~Implementar pdf_parser real para cerrar HITL-1 (CA-03/CA-06)~~ | **CORREGIDO 2026-07-02** |
-| Fase 7 | Investigar causa raíz de CA-01 (LOB, 7 fallos de 72) y CA-06 (HITL routing, 7 fallos en STP/HITL-3) | PENDIENTE |
-| **Fase 8** | Parseo real de adjuntos (CA-02) + bandeja de HITL pendientes (backend + CLI) | **COMPLETADA 2026-07-08 — validación local; pendiente pasada agregada en LangSmith (ver SESSION_LOG.md y DUDA-007)** |
+| Fase 7 | Investigar causa raíz de CA-01 y CA-06 + mejoras de prompts (EDD v2.0) | **EN CURSO 2026-07-09 — análisis completado, 4 fixes aplicados en `backend/prompts/`; pendiente validación con `run_phoenix_eval.py --name e2e-v2-prompt-fixes`** |
+| **Fase 8** | Parseo real de adjuntos (CA-02) + bandeja de HITL pendientes (backend + CLI) | **COMPLETADA 2026-07-08 — validación local; pendiente pasada agregada en Phoenix (ver SESSION_LOG.md y DUDA-007)** |
 
 > **Corrección Fase 6 (2026-07-02):** El diagnóstico original ("falta pdf_parser") era **incorrecto**. La causa real de que HITL-1 no se activara era una contaminación de datos sintéticos entre `email_raw` y `missing_fields_expected` en las 14 submissions HITL-1 (ver **DUDA-005** y corrección en SESSION_LOG.md 2026-07-02). Se corrigió editando el email para hacerlo consistente con el ground truth ya existente, **sin** implementar pdf_parser. `pdf_parser` queda descartado como solución a HITL-1; sigue siendo una mejora legítima pendiente para **CA-02** (parsear cnae_code/loss_history/loss_ratio de adjuntos) si se decide abordar como iniciativa separada.
 
@@ -50,19 +50,17 @@
 ## Detalle Fase 4 — PARCIAL 2026-06-30
 
 ### Objetivo
-Evaluación formal del agente con LangSmith Experiments, trazabilidad por submission, y comparación de experimentos.
+Evaluación formal del agente con Phoenix Arize Datasets & Experiments, trazabilidad por submission (trace_id enlazado), y comparación histórica de experimentos.
 
 ### Completado
-- [x] `evals/evaluators.py` — 8 evaluadores (CA-01 a CA-08) con doble firma: standalone + LangSmith
-- [x] `scripts/upload_dataset.py` — sube el golden dataset de 72 submissions a LangSmith
-- [x] `scripts/run_langsmith_eval.py` — harness `langsmith.evaluate()` con `max_concurrency=1`
-
-### Pendiente (bloqueado por LangSmith key 403)
-- [x] Obtener LANGCHAIN_API_KEY válida en smith.langchain.com
-- [x] Ejecutar `upload_dataset.py` para crear dataset "chubb-uw-golden-72"
-- [x] Ejecutar `run_langsmith_eval.py` y publicar primer Experiment
-- [ ] Añadir `config={"metadata": {"submission_id": ...}}` a las llamadas LLM para trazar tokens por submission
-- [ ] Crear dashboard con agregación de métricas CA-01 a CA-08
+- [x] `evals/evaluators.py` — 8 evaluadores (CA-01 a CA-08) con firma standalone
+- [x] `scripts/upload_dataset.py` / `scripts/upload_phoenix_dataset.py` — sube el golden dataset de 72 submissions
+- [x] `scripts/run_langsmith_eval.py` — harness LangSmith (archivado; reemplazado por Phoenix)
+- [x] `scripts/run_phoenix_eval.py` — harness Phoenix Experiments con trace_id y tokens por submission
+- [x] `observability/phoenix/init_tracing.py` — tracing OTEL automático vía LangChainInstrumentor
+- [x] Dataset `chubb-uw-golden-72` publicado en Phoenix
+- [x] Experimento baseline `e2e-v1-baseline-traced` publicado (68/72 runs)
+- [ ] Ejecutar experimento v2 (`e2e-v2-prompt-fixes`) para validar mejoras CA-01 y CA-06
 
 ### Umbral de aceptación
 | Métrica | Umbral | Prioridad |
@@ -76,18 +74,18 @@ Evaluación formal del agente con LangSmith Experiments, trazabilidad por submis
 | CA-07 LLM-Judge | ≥ 85 pts en ≥ 90% | Should |
 | CA-08 Time-to-quote | < 4 min en ≥ 95% | Must |
 
-### Estado actual vs umbral (experimento chubb-uw-e2e-d1881dca, 2026-07-04)
+### Estado actual vs umbral (baseline `e2e-v1-baseline-traced`, Phoenix, 2026-07-08, 68/72 runs)
 
-| Métrica | Umbral | Resultado | Estado |
+| Métrica | Umbral | Baseline v1 | Estado |
 |---|---|---|---|
-| CA-01 LOB accuracy | ≥ 95% | 90.3% (65/72) | Pendiente |
-| CA-02 Extraction | ≥ 80% | 99.1% (68/72) | Cumple ✓ |
-| CA-03 Missing fields | ≥ 90% | 100% (72/72) | Cumple ✓ |
-| CA-04 Appetite | ≥ 85% | 91.7% (66/72) | Cumple ✓ |
-| CA-05 RAG citas | 100% | 100% (72/72) | Cumple ✓ |
-| CA-06 HITL routing | ≥ 95% | 90.3% (65/72) | Pendiente |
-| CA-07 LLM-Judge | ≥ 85 pts en ≥ 90% | 100% (72/72) | Cumple ✓ |
-| CA-08 Time-to-quote | < 4 min en ≥ 95% | 100% (72/72) | Cumple ✓ |
+| CA-01 LOB accuracy | ≥ 95% | ~89% | Pendiente — fix H1 aplicado en prompts |
+| CA-02 Extraction | ≥ 80% | ~99% | Cumple ✓ |
+| CA-03 Missing fields | ≥ 90% | ~100% | Cumple ✓ |
+| CA-04 Appetite | ≥ 85% | ~92% | Cumple ✓ |
+| CA-05 RAG citas | 100% | ~100% | Cumple ✓ |
+| CA-06 HITL routing | ≥ 95% | ~72% | Pendiente — fixes H2/H3/H4 aplicados en prompts |
+| CA-07 LLM-Judge | ≥ 85 pts en ≥ 90% | ~100% | Cumple ✓ |
+| CA-08 Time-to-quote | < 4 min en ≥ 95% | ~100% | Cumple ✓ |
 
 ---
 
@@ -96,4 +94,4 @@ Evaluación formal del agente con LangSmith Experiments, trazabilidad por submis
 Ver diseño completo en [ARCHITECTURE.md](ARCHITECTURE.md).
 Dudas pendientes de resolución en [DUDAS.md](DUDAS.md).
 
-**Modelo LLM en uso (2026-07-02):** `gpt4o` de **Azure OpenAI** (deployment configurado en `.env` como `AZURE_OPENAI_DEPLOYMENT`), **no** `claude-sonnet-4-6` como indicaban originalmente CLAUDE.md y DUDA-001. Esta discrepancia en CLAUDE.md/DUDAS.md **sigue sin corregirse formalmente** — habría que actualizar ambos documentos en una pasada de limpieza de documentación.
+**Modelo LLM en uso:** `gpt4o` de **Azure OpenAI** (deployment configurado en `.env` como `AZURE_OPENAI_DEPLOYMENT`). CLAUDE.md actualizado para reflejar esto (2026-07-09).

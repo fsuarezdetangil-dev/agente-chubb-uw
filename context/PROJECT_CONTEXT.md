@@ -28,6 +28,6 @@ Mínimo 4 de 7 métricas deben alcanzar target en 50-100 submissions de prueba:
 | Activación HITL correcta | > 95 % |
 
 ## Estado actual
-**Fase 0 — Setup del repositorio** (EN CURSO)
+**Fase 8+ — EDD v2.0 en curso** (mejoras de prompts para CA-01 y CA-06)
 
 Ver plan de fases completo en [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md).

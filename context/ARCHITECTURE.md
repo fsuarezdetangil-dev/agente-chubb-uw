@@ -135,7 +135,7 @@ Implementados con `interrupt_before` de LangGraph. El estado se persiste en SQLi
 
 - **Base de conocimiento:** guidelines de apetito de suscripción de Chubb EMEA (documentos PDF internos)
 - **Chunking:** por sección, 512 tokens, overlap 50 tokens
-- **Embedding model:** `text-embedding-3-small` de OpenAI o equivalente de Anthropic
+- **Embedding model:** `text-embedding-3-small` de Azure OpenAI (en uso en PoC)
 - **Vector store:** ChromaDB local en `backend/kb/index/` (PoC) → Azure Cognitive Search en producción
 - **Raw docs:** `backend/kb/raw/` — PDFs originales, no versionados
 - **Processed docs:** `backend/kb/processed/` — chunks en JSON listos para indexar
