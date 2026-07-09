@@ -1,0 +1,22 @@
+{
+  "total": 72,
+  "property": 30,
+  "casualty": 30,
+  "edge_cases": 12,
+  "by_appetite": {
+    "dentro": 41,
+    "fuera": 10,
+    "revision": 21
+  },
+  "by_expected_hitl_trigger": {
+    "HITL-1_datos_incompletos": 14,
+    "STP_dentro_apetito": 27,
+    "HITL-2_declinar": 10,
+    "HITL-3_referir_senior": 21
+  },
+  "incomplete_data_count": 14,
+  "complete_data_count": 58,
+  "reflection_test_cases": 2,
+  "renewal_count": 34,
+  "new_business_count": 38
+}

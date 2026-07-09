@@ -1,0 +1,94 @@
+Submissions a procesar: 72
+Inicio: 11:27:30
+
+[01/72] SUB-001 | property_dentro_incompleto | [✓✓✓✓✓✓✓✓] 63.6s | risk=45 | prima=7021EUR
+[02/72] SUB-002 | property_dentro | [✓✓✓✓✓✓✓✓] 41.8s | risk=45 | prima=1595EUR
+[03/72] SUB-003 | property_fuera | [✓✓✓✓✓✓✓✓] 44.9s | risk=85 | prima=32559EUR
+[04/72] SUB-004 | property_fuera | [✓✓✓✓✓✓✓✓] 36.8s | risk=85 | prima=8960EUR
+[05/72] SUB-005 | property_revision | [✓✓✓✓✓✓✓✓] 30.1s | risk=85 | prima=9154EUR
+[06/72] SUB-006 | property_dentro_incompleto | [✓✓✓✗✓✓✓✓] 34.1s | risk=78 | prima=0EUR
+[07/72] SUB-007 | property_revision | [✓✓✓✓✓✓✓✓] 32.8s | risk=78 | prima=7684EUR
+[08/72] SUB-008 | property_revision | [✓✓✓✓✓✓✓✓] 31.9s | risk=80 | prima=16999EUR
+[09/72] SUB-009 | property_fuera | [✓✓✓✓✓✓✓✓] 32.4s | risk=85 | prima=10323EUR
+[10/72] SUB-010 | property_dentro | [✓✓✓✓✓✗✓✓] 34.3s | risk=60 | prima=8895EUR
+[11/72] SUB-011 | property_dentro_incompleto | [✓✓✓✓✓✓✓✓] 33.6s | risk=60 | prima=0EUR
+[12/72] SUB-012 | property_fuera | [✓✓✓✓✓✓✓✓] 31.4s | risk=85 | prima=20906EUR
+[13/72] SUB-013 | property_dentro | [✓✓✓✓✓✓✓✓] 32.1s | risk=45 | prima=1418EUR
+[14/72] SUB-014 | property_dentro | [✓✓✓✓✓✓✓✓] 28.7s | risk=45 | prima=2957EUR
+[15/72] SUB-015 | property_dentro | [✗✓✓✓✓✓✓✓] 29.6s | risk=45 | prima=10166EUR
+[16/72] SUB-016 | property_revision_incompleto | [✓✓✓✓✓✓✓✓] 31.8s | risk=85 | prima=0EUR
+[17/72] SUB-017 | property_dentro | [✗✓✓✓✓✓✓✓] 29.2s | risk=45 | prima=1027EUR
+[18/72] SUB-018 | property_dentro | [✓✓✓✓✓✓✓✓] 30.2s | risk=45 | prima=7251EUR
+[19/72] SUB-019 | property_dentro | [✓✓✓✓✓✓✓✓] 32.8s | risk=85 | prima=15881EUR
+[20/72] SUB-020 | property_dentro | [✓✓✓✗✓✓✓✓] 33.2s | risk=85 | prima=9427EUR
+[21/72] SUB-021 | property_dentro_incompleto | [✓✓✓✓✓✓✓✓] 33.7s | risk=45 | prima=0EUR
+[22/72] SUB-022 | property_dentro | [✓✓✓✓✓✓✓✓] 32.9s | risk=45 | prima=4023EUR
+[23/72] SUB-023 | property_dentro | [✓✓✓✓✓✓✓✓] 34.2s | risk=45 | prima=7442EUR
+[24/72] SUB-024 | property_dentro | [✓✓✓✓✓✓✓✓] 33.1s | risk=65 | prima=5813EUR
+[25/72] SUB-025 | property_revision | [✓✓✓✓✓✓✓✓] 31.8s | risk=78 | prima=4343EUR
+[26/72] SUB-026 | property_dentro_incompleto | [✗✓✓✓✓✓✓✓] 30.0s | risk=45 | prima=0EUR
+[27/72] SUB-027 | property_dentro | [✓✓✓✓✓✓✓✓] 33.2s | risk=60 | prima=2733EUR
+[28/72] SUB-028 | property_dentro | [✓✓✓✓✓✓✓✓] 31.0s | risk=45 | prima=6610EUR
+[29/72] SUB-029 | property_dentro | [✓✓✓✓✓✗✓✓] 34.3s | risk=65 | prima=8326EUR
+[30/72] SUB-030 | property_revision | [✓✓✓✓✓✓✓✓] 34.2s | risk=85 | prima=10184EUR
+[31/72] SUB-031 | casualty_dentro_incompleto | [✓✓✓✓✓✓✓✓] 34.3s | risk=65 | prima=9479EUR
+[32/72] SUB-032 | casualty_dentro | [✓✓✓✓✓✓✓✓] 30.5s | risk=45 | prima=8263EUR
+[33/72] SUB-033 | casualty_dentro | [✓✓✓✓✓✓✓✓] 29.2s | risk=60 | prima=5996EUR
+[34/72] SUB-034 | casualty_dentro | [✓✓✓✓✓✓✓✓] 35.4s | risk=45 | prima=2299EUR
+[35/72] SUB-035 | casualty_revision | [✓✓✓✓✓✓✓✓] 31.3s | risk=78 | prima=4748EUR
+[36/72] SUB-036 | casualty_dentro_incompleto | [✓✓✓✓✓✓✓✓] 30.4s | risk=45 | prima=0EUR
+[37/72] SUB-037 | casualty_dentro | [✓✓✓✓✓✗✓✓] 33.6s | risk=60 | prima=14709EUR
+[38/72] SUB-038 | casualty_dentro | [✓✓✓✓✓✗✓✓] 30.7s | risk=60 | prima=21459EUR
+[39/72] SUB-039 | casualty_revision | [✓✓✓✓✓✓✓✓] 31.0s | risk=85 | prima=16138EUR
+[40/72] SUB-040 | casualty_dentro | [✓✓✓✓✓✓✓✓] 27.2s | risk=45 | prima=1284EUR
+[41/72] SUB-041 | casualty_dentro_incompleto | [✓✓✓✓✓✓✓✓] 30.3s | risk=40 | prima=0EUR
+[42/72] SUB-042 | casualty_fuera | [✓✓✓✓✓✓✓✓] 29.1s | risk=80 | prima=11536EUR
+[43/72] SUB-043 | casualty_fuera | [✓✓✓✓✓✓✓✓] 31.0s | risk=80 | prima=11177EUR
+[44/72] SUB-044 | casualty_fuera | [✓✓✓✓✓✓✓✓] 30.8s | risk=80 | prima=9754EUR
+[45/72] SUB-045 | casualty_dentro | [✓✓✓✓✓✗✓✓] 30.9s | risk=60 | prima=18444EUR
+[46/72] SUB-046 | casualty_revision_incompleto | [✓✓✓✓✓✓✓✓] 32.1s | risk=80 | prima=8858EUR
+[47/72] SUB-047 | casualty_fuera | [✓✓✓✓✓✓✓✓] 30.6s | risk=80 | prima=5893EUR
+[48/72] SUB-048 | casualty_dentro | [✗✓✓✓✓✓✓✓] 28.4s | risk=45 | prima=5844EUR
+[49/72] SUB-049 | casualty_revision | [✓✓✓✓✓✓✓✓] 30.2s | risk=85 | prima=14404EUR
+[50/72] SUB-050 | casualty_revision | [✓✓✓✓✓✓✓✓] 30.5s | risk=85 | prima=16174EUR
+[51/72] SUB-051 | casualty_dentro_incompleto | [✓✓✓✓✓✓✓✓] 31.8s | risk=45 | prima=5748EUR
+[52/72] SUB-052 | casualty_dentro | [✓✓✓✓✓✓✓✓] 30.7s | risk=45 | prima=1367EUR
+[53/72] SUB-053 | casualty_dentro | [✗✓✓✓✓✓✓✓] 29.5s | risk=45 | prima=9727EUR
+[54/72] SUB-054 | casualty_dentro | [✓✓✓✓✓✓✓✓] 30.2s | risk=75 | prima=13941EUR
+[55/72] SUB-055 | casualty_dentro | [✗✓✓✓✓✓✓✓] 30.1s | risk=45 | prima=5567EUR
+[56/72] SUB-056 | casualty_dentro_incompleto | [✓✓✓✗✓✓✓✓] 32.2s | risk=78 | prima=0EUR
+[57/72] SUB-057 | casualty_revision | [✓✓✓✓✓✓✓✓] 30.4s | risk=78 | prima=3766EUR
+[58/72] SUB-058 | casualty_revision | [✓✓✓✓✓✓✓✓] 32.2s | risk=78 | prima=2859EUR
+[59/72] SUB-059 | casualty_revision | [✓✓✓✓✓✓✓✓] 31.5s | risk=78 | prima=3216EUR
+[60/72] SUB-060 | casualty_dentro | [✓✓✓✓✓✓✓✓] 30.4s | risk=45 | prima=11300EUR
+[61/72] SUB-061 | edge_fuera_apetito_claro | [✓✓✓✓✓✓✓✓] 32.3s | risk=85 | prima=20446EUR
+[62/72] SUB-062 | edge_fuera_apetito_claro | [✓✓✓✓✓✓✓✓] 30.8s | risk=78 | prima=6052EUR
+[63/72] SUB-063 | edge_datos_muy_incompletos | [✓✓✓✓✓✓✓✓] 31.4s | risk=85 | prima=0EUR
+[64/72] SUB-064 | edge_datos_muy_incompletos | [✓✓✓✓✓✓✓✓] 33.3s | risk=85 | prima=0EUR
+[65/72] SUB-065 | edge_riesgo_complejo_dentro_apetito | [✗✓✓✓✓✓✓✓] 31.7s | risk=78 | prima=2202EUR
+[66/72] SUB-066 | edge_riesgo_complejo_dentro_apetito | [✓✓✓✓✓✓✓✓] 29.7s | risk=78 | prima=7799EUR
+[67/72] SUB-067 | edge_suma_asegurada_extrema | [✓✓✓✗✓✗✓✓] 43.0s | risk=45 | prima=4042EUR
+[68/72] SUB-068 | edge_multinacional_multiubicacion | [✓✓✓✗✓✗✓✓] 29.6s | risk=45 | prima=1877EUR
+[69/72] SUB-069 | edge_canal_api | [✗✓✓✗✓✓✓✓] 30.0s | risk=85 | prima=17384EUR
+[70/72] SUB-070 | edge_clasificacion_ambigua | [✓✓✓✓✓✓✓✓] 34.9s | risk=78 | prima=13154EUR
+[71/72] SUB-071 | edge_reflection_output_quality | [✓✓✓✓✓✓✓✓] 30.6s | risk=45 | prima=1926EUR
+[72/72] SUB-072 | edge_reflection_output_quality | [✓✓✓✓✓✓✓✓] 31.4s | risk=30 | prima=2328EUR
+
+=================================================================
+RESULTADOS E2E -- 72/72 submissions completadas sin error
+=================================================================
+CA-01 LOB accuracy:           64/72 = 89%
+CA-02 Extraction avg accuracy: 0.99
+CA-03 Missing fields detect:   72/72 = 100%
+CA-04 Appetite verdict:        66/72 = 92%
+CA-05 RAG citations:           72/72 = 100%
+CA-06 HITL correcto:           65/72 = 90%
+CA-07 LLM-Judge >=85:          72/72 = 100% | avg score: 92.99
+CA-08 Time-to-quote <4min:     72/72 = 100% | avg: 27.16s
+
+Errores: 0
+
+Distribucion veredictos apetito: {'dentro': 39, 'fuera': 10, 'revision': 23}
+Distribucion HITL esperado:      {'HITL-1_datos_incompletos': 14, 'STP_dentro_apetito': 27, 'HITL-2_declinar': 10, 'HITL-3_referir_senior': 21}
+
+Resultados guardados en: evals\results\e2e_20260707_120630.json

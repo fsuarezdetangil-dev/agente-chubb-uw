@@ -1,0 +1,1488 @@
+[
+  {
+    "submission_id": "SUB-031",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro_incompleto",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-06-19T16:38:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Empresa del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa del Sur, dedicado a la actividad de empresa de jardinería y paisajismo, con sede en Sevilla.\n\nSolicitan cobertura de Responsabilidad Civil Patronal con una suma asegurada aproximada de 4,269,996 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-031_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa del Sur. CNAE 8130 — Empresa de jardinería y paisajismo. Ubicación: Sevilla. Suma asegurada solicitada: 4269996 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.24."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa del Sur",
+      "cnae_code": "8130",
+      "activity_description": "Empresa de jardinería y paisajismo",
+      "province": "Sevilla",
+      "sum_insured_eur": 4269996,
+      "requested_coverages": [],
+      "loss_history": [
+        {
+          "fecha": "2025-12-18",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 93725
+        },
+        {
+          "fecha": "2025-05-10",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 61934
+        }
+      ],
+      "loss_ratio": 0.24,
+      "renewal": false
+    },
+    "missing_fields_expected": [
+      "requested_coverages"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): requested_coverages"
+  },
+  {
+    "submission_id": "SUB-032",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "portal",
+    "broker": "Gallagher España",
+    "received_at": "2026-03-02T08:35:00Z",
+    "email_raw": {
+      "from": "suscripcion@gallagherespaña.es",
+      "subject": "Nueva solicitud P&C — Academia Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Academia Centro SL, dedicado a la actividad de academia de formación profesional, con sede en Sevilla.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil General con una suma asegurada aproximada de 2,673,965 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGallagher España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-032_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Academia Centro SL. CNAE 8559 — Academia de formación profesional. Ubicación: Sevilla. Suma asegurada solicitada: 2673965 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.34."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Academia Centro SL",
+      "cnae_code": "8559",
+      "activity_description": "Academia de formación profesional",
+      "province": "Sevilla",
+      "sum_insured_eur": 2673965,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.34,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-033",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-02-05T17:19:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Nueva solicitud P&C — Empresa Iberia",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa Iberia, dedicado a la actividad de empresa de mantenimiento de ascensores, con sede en Madrid.\n\nSolicitan cobertura de Responsabilidad Civil General, Responsabilidad Civil Profesional, Responsabilidad Civil Patronal, Responsabilidad Civil Productos con una suma asegurada aproximada de 2,750,619 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-033_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Iberia. CNAE 3312 — Empresa de mantenimiento de ascensores. Ubicación: Madrid. Suma asegurada solicitada: 2750619 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.38."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Iberia",
+      "cnae_code": "3312",
+      "activity_description": "Empresa de mantenimiento de ascensores",
+      "province": "Madrid",
+      "sum_insured_eur": 2750619,
+      "requested_coverages": [
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-02-28",
+          "tipo": "incendio",
+          "importe_eur": 151987
+        },
+        {
+          "fecha": "2024-08-16",
+          "tipo": "rotura cristales",
+          "importe_eur": 90814
+        }
+      ],
+      "loss_ratio": 0.38,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-034",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Correduría Mediterránea de Seguros",
+    "received_at": "2026-05-24T09:48:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríamediterráneadeseguros.es",
+      "subject": "Renovación P&C — Restaurante Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Restaurante Norte SA, dedicado a la actividad de restaurante de cocina internacional, con sede en A Coruña.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil Patronal, Responsabilidad Civil Productos, Responsabilidad Civil General con una suma asegurada aproximada de 1,014,549 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Mediterránea de Seguros"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-034_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Restaurante Norte SA. CNAE 5610 — Restaurante de cocina internacional. Ubicación: A Coruña. Suma asegurada solicitada: 1014549 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.09."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Restaurante Norte SA",
+      "cnae_code": "5610",
+      "activity_description": "Restaurante de cocina internacional",
+      "province": "A Coruña",
+      "sum_insured_eur": 1014549,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.09,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-035",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "portal",
+    "broker": "Gallagher España",
+    "received_at": "2026-04-04T16:14:00Z",
+    "email_raw": {
+      "from": "suscripcion@gallagherespaña.es",
+      "subject": "Renovación P&C — Empresa Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Atlántico SA, dedicado a la actividad de empresa de transporte de mercancías por carretera, con sede en Murcia.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil Profesional con una suma asegurada aproximada de 2,043,051 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGallagher España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-035_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Atlántico SA. CNAE 4941 — Empresa de transporte de mercancías por carretera. Ubicación: Murcia. Suma asegurada solicitada: 2043051 EUR. Histórico de siniestros declarados: 3 casos en los últimos 3 años. Loss ratio histórico estimado: 0.53."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Atlántico SA",
+      "cnae_code": "4941",
+      "activity_description": "Empresa de transporte de mercancías por carretera",
+      "province": "Murcia",
+      "sum_insured_eur": 2043051,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil Profesional"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-03-08",
+          "tipo": "agua",
+          "importe_eur": 146201
+        },
+        {
+          "fecha": "2022-03-01",
+          "tipo": "rotura cristales",
+          "importe_eur": 119596
+        },
+        {
+          "fecha": "2025-05-02",
+          "tipo": "agua",
+          "importe_eur": 77024
+        }
+      ],
+      "loss_ratio": 0.53,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-036",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro_incompleto",
+    "channel": "email",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-06-10T14:17:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Renovación P&C — Restaurante Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Restaurante Centro SL, dedicado a la actividad de restaurante de cocina internacional, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil Profesional con una suma asegurada aproximada de 5,732,753 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-036_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Restaurante Centro SL. CNAE 5610 — Restaurante de cocina internacional. Ubicación: Barcelona. Suma asegurada solicitada: 5732753 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.37."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Restaurante Centro SL",
+      "cnae_code": "5610",
+      "activity_description": "Restaurante de cocina internacional",
+      "province": "Barcelona",
+      "sum_insured_eur": null,
+      "requested_coverages": [],
+      "loss_history": [],
+      "loss_ratio": 0.37,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "requested_coverages",
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): requested_coverages, sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-037",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-03-06T17:27:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Renovación P&C — Gimnasio Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Gimnasio Atlántico SA, dedicado a la actividad de gimnasio y centro deportivo, con sede en A Coruña.\n\nSolicitan cobertura de Responsabilidad Civil General, Responsabilidad Civil Profesional, Responsabilidad Civil Patronal con una suma asegurada aproximada de 4,498,264 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-037_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Gimnasio Atlántico SA. CNAE 9311 — Gimnasio y centro deportivo. Ubicación: A Coruña. Suma asegurada solicitada: 4498264 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.22."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Gimnasio Atlántico SA",
+      "cnae_code": "9311",
+      "activity_description": "Gimnasio y centro deportivo",
+      "province": "A Coruña",
+      "sum_insured_eur": 4498264,
+      "requested_coverages": [
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-10-02",
+          "tipo": "rotura cristales",
+          "importe_eur": 85994
+        },
+        {
+          "fecha": "2024-01-03",
+          "tipo": "agua",
+          "importe_eur": 178263
+        }
+      ],
+      "loss_ratio": 0.22,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-038",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-03-09T13:07:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Gimnasio Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Gimnasio Mediterráneo SL, dedicado a la actividad de gimnasio y centro deportivo, con sede en Valencia.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil Patronal, Responsabilidad Civil Productos, Responsabilidad Civil General con una suma asegurada aproximada de 5,624,960 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-038_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Gimnasio Mediterráneo SL. CNAE 9311 — Gimnasio y centro deportivo. Ubicación: Valencia. Suma asegurada solicitada: 5624960 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.39."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Gimnasio Mediterráneo SL",
+      "cnae_code": "9311",
+      "activity_description": "Gimnasio y centro deportivo",
+      "province": "Valencia",
+      "sum_insured_eur": 5624960,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-06-14",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 85663
+        }
+      ],
+      "loss_ratio": 0.39,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-039",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "portal",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-03-15T15:07:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Nueva solicitud P&C — Empresa Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa Norte SA, dedicado a la actividad de empresa de seguridad privada, con sede en Murcia.\n\nSolicitan cobertura de Responsabilidad Civil Patronal con una suma asegurada aproximada de 6,780,601 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-039_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Norte SA. CNAE 8010 — Empresa de seguridad privada. Ubicación: Murcia. Suma asegurada solicitada: 6780601 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.8."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Norte SA",
+      "cnae_code": "8010",
+      "activity_description": "Empresa de seguridad privada",
+      "province": "Murcia",
+      "sum_insured_eur": 6780601,
+      "requested_coverages": [
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-11-28",
+          "tipo": "robo",
+          "importe_eur": 122604
+        },
+        {
+          "fecha": "2025-01-07",
+          "tipo": "robo",
+          "importe_eur": 96338
+        }
+      ],
+      "loss_ratio": 0.8,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines; suma asegurada/límite (6,780,601 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-040",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-04-27T15:30:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Consultora Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Consultora Norte SA, dedicado a la actividad de consultora de ingeniería civil, con sede en Murcia.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil Productos con una suma asegurada aproximada de 542,174 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-040_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Consultora Norte SA. CNAE 7112 — Consultora de ingeniería civil. Ubicación: Murcia. Suma asegurada solicitada: 542174 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.26."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Consultora Norte SA",
+      "cnae_code": "7112",
+      "activity_description": "Consultora de ingeniería civil",
+      "province": "Murcia",
+      "sum_insured_eur": 542174,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2023-12-06",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 145899
+        },
+        {
+          "fecha": "2022-09-14",
+          "tipo": "incendio",
+          "importe_eur": 60403
+        }
+      ],
+      "loss_ratio": 0.26,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-041",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro_incompleto",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-05-16T13:21:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Despacho Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Despacho Centro SL, dedicado a la actividad de despacho de arquitectura, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil General, Responsabilidad Civil Patronal con una suma asegurada aproximada de 2,344,563 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-041_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Despacho Centro SL. CNAE 7111 — Despacho de arquitectura. Ubicación: Bilbao. Suma asegurada solicitada: 2344563 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.24."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Despacho Centro SL",
+      "cnae_code": "7111",
+      "activity_description": "Despacho de arquitectura",
+      "province": "Bilbao",
+      "sum_insured_eur": null,
+      "requested_coverages": [],
+      "loss_history": [
+        {
+          "fecha": "2025-04-20",
+          "tipo": "robo",
+          "importe_eur": 37284
+        }
+      ],
+      "loss_ratio": 0.24,
+      "renewal": false
+    },
+    "missing_fields_expected": [
+      "requested_coverages",
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): requested_coverages, sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-042",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_fuera",
+    "channel": "email",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-03-28T18:54:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Nueva solicitud P&C — Operador Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Operador Centro SL, dedicado a la actividad de operador de parque de atracciones, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil Profesional, Responsabilidad Civil Patronal con una suma asegurada aproximada de 4,929,818 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-042_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Operador Centro SL. CNAE 9321 — Operador de parque de atracciones. Ubicación: Barcelona. Suma asegurada solicitada: 4929818 EUR. Histórico de siniestros declarados: 6 casos en los últimos 3 años. Loss ratio histórico estimado: 1.19."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Operador Centro SL",
+      "cnae_code": "9321",
+      "activity_description": "Operador de parque de atracciones",
+      "province": "Barcelona",
+      "sum_insured_eur": 4929818,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-04-23",
+          "tipo": "agua",
+          "importe_eur": 151393
+        },
+        {
+          "fecha": "2025-04-28",
+          "tipo": "rotura cristales",
+          "importe_eur": 12941
+        },
+        {
+          "fecha": "2024-12-16",
+          "tipo": "rotura cristales",
+          "importe_eur": 102708
+        },
+        {
+          "fecha": "2023-08-02",
+          "tipo": "agua",
+          "importe_eur": 133172
+        },
+        {
+          "fecha": "2024-02-28",
+          "tipo": "rotura cristales",
+          "importe_eur": 27638
+        },
+        {
+          "fecha": "2025-01-24",
+          "tipo": "agua",
+          "importe_eur": 108973
+        }
+      ],
+      "loss_ratio": 1.19,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 9321) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-043",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_fuera",
+    "channel": "portal",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-04-19T10:14:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Renovación P&C — Empresa Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Mediterráneo SL, dedicado a la actividad de empresa de demolición y derribos, con sede en Valencia.\n\nSolicitan cobertura de Responsabilidad Civil General, Responsabilidad Civil Productos con una suma asegurada aproximada de 4,776,348 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-043_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Mediterráneo SL. CNAE 4311 — Empresa de demolición y derribos. Ubicación: Valencia. Suma asegurada solicitada: 4776348 EUR. Histórico de siniestros declarados: 6 casos en los últimos 3 años. Loss ratio histórico estimado: 1.57."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Mediterráneo SL",
+      "cnae_code": "4311",
+      "activity_description": "Empresa de demolición y derribos",
+      "province": "Valencia",
+      "sum_insured_eur": 4776348,
+      "requested_coverages": [
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-09-02",
+          "tipo": "robo",
+          "importe_eur": 19436
+        },
+        {
+          "fecha": "2023-11-22",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 61134
+        },
+        {
+          "fecha": "2022-07-04",
+          "tipo": "incendio",
+          "importe_eur": 117807
+        },
+        {
+          "fecha": "2023-12-10",
+          "tipo": "incendio",
+          "importe_eur": 13556
+        },
+        {
+          "fecha": "2024-01-10",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 99762
+        },
+        {
+          "fecha": "2025-03-08",
+          "tipo": "robo",
+          "importe_eur": 109516
+        }
+      ],
+      "loss_ratio": 1.57,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 4311) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-044",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_fuera",
+    "channel": "portal",
+    "broker": "Gallagher España",
+    "received_at": "2026-05-26T13:14:00Z",
+    "email_raw": {
+      "from": "suscripcion@gallagherespaña.es",
+      "subject": "Renovación P&C — Empresa Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Norte SA, dedicado a la actividad de empresa de demolición y derribos, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil General, Responsabilidad Civil Profesional, Responsabilidad Civil Patronal con una suma asegurada aproximada de 4,168,405 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGallagher España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-044_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Norte SA. CNAE 4311 — Empresa de demolición y derribos. Ubicación: Bilbao. Suma asegurada solicitada: 4168405 EUR. Histórico de siniestros declarados: 5 casos en los últimos 3 años. Loss ratio histórico estimado: 1.19."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Norte SA",
+      "cnae_code": "4311",
+      "activity_description": "Empresa de demolición y derribos",
+      "province": "Bilbao",
+      "sum_insured_eur": 4168405,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-08-10",
+          "tipo": "robo",
+          "importe_eur": 42912
+        },
+        {
+          "fecha": "2022-08-12",
+          "tipo": "robo",
+          "importe_eur": 79921
+        },
+        {
+          "fecha": "2025-12-09",
+          "tipo": "rotura cristales",
+          "importe_eur": 80699
+        },
+        {
+          "fecha": "2023-07-28",
+          "tipo": "rotura cristales",
+          "importe_eur": 29458
+        },
+        {
+          "fecha": "2023-07-19",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 152183
+        }
+      ],
+      "loss_ratio": 1.19,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 4311) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-045",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "portal",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-01-10T13:47:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Renovación P&C — Academia Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Academia Centro SL, dedicado a la actividad de academia de formación profesional, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil General, Responsabilidad Civil Patronal con una suma asegurada aproximada de 5,640,337 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-045_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Academia Centro SL. CNAE 8559 — Academia de formación profesional. Ubicación: Barcelona. Suma asegurada solicitada: 5640337 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.27."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Academia Centro SL",
+      "cnae_code": "8559",
+      "activity_description": "Academia de formación profesional",
+      "province": "Barcelona",
+      "sum_insured_eur": 5640337,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.27,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-046",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision_incompleto",
+    "channel": "email",
+    "broker": "Gallagher España",
+    "received_at": "2026-01-26T14:00:00Z",
+    "email_raw": {
+      "from": "suscripcion@gallagherespaña.es",
+      "subject": "Nueva solicitud P&C — Empresa del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa del Sur, dedicado a la actividad de empresa de transporte de mercancías por carretera, con sede en Murcia.\n\nSolicitan cobertura de Responsabilidad Civil General, Responsabilidad Civil Patronal, Responsabilidad Civil Profesional con una suma asegurada aproximada de 3,785,492 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGallagher España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-046_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa del Sur. CNAE 4941 — Empresa de transporte de mercancías por carretera. Ubicación: Murcia. Suma asegurada solicitada: 3785492 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.53."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa del Sur",
+      "cnae_code": "4941",
+      "activity_description": "Empresa de transporte de mercancías por carretera",
+      "province": "Murcia",
+      "sum_insured_eur": 3785492,
+      "requested_coverages": [],
+      "loss_history": [
+        {
+          "fecha": "2024-09-17",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 44634
+        }
+      ],
+      "loss_ratio": 0.53,
+      "renewal": false
+    },
+    "missing_fields_expected": [
+      "requested_coverages"
+    ],
+    "appetite_expected": "revision",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): requested_coverages"
+  },
+  {
+    "submission_id": "SUB-047",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_fuera",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-03-16T09:06:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Nueva solicitud P&C — Operador Iberia",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Operador Iberia, dedicado a la actividad de operador de parque de atracciones, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil Patronal con una suma asegurada aproximada de 2,518,439 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-047_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Operador Iberia. CNAE 9321 — Operador de parque de atracciones. Ubicación: Bilbao. Suma asegurada solicitada: 2518439 EUR. Histórico de siniestros declarados: 3 casos en los últimos 3 años. Loss ratio histórico estimado: 1.19."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Operador Iberia",
+      "cnae_code": "9321",
+      "activity_description": "Operador de parque de atracciones",
+      "province": "Bilbao",
+      "sum_insured_eur": 2518439,
+      "requested_coverages": [
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-10-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 29902
+        },
+        {
+          "fecha": "2023-08-01",
+          "tipo": "robo",
+          "importe_eur": 148669
+        },
+        {
+          "fecha": "2024-10-08",
+          "tipo": "incendio",
+          "importe_eur": 168067
+        }
+      ],
+      "loss_ratio": 1.19,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 9321) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-048",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-04-08T13:06:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Nueva solicitud P&C — Empresa del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa del Sur, dedicado a la actividad de empresa de instalaciones eléctricas, con sede en Málaga.\n\nSolicitan cobertura de Responsabilidad Civil Productos con una suma asegurada aproximada de 2,269,645 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-048_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa del Sur. CNAE 4321 — Empresa de instalaciones eléctricas. Ubicación: Málaga. Suma asegurada solicitada: 2269645 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.1."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa del Sur",
+      "cnae_code": "4321",
+      "activity_description": "Empresa de instalaciones eléctricas",
+      "province": "Málaga",
+      "sum_insured_eur": 2269645,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-06-22",
+          "tipo": "robo",
+          "importe_eur": 111371
+        },
+        {
+          "fecha": "2023-07-21",
+          "tipo": "incendio",
+          "importe_eur": 129779
+        }
+      ],
+      "loss_ratio": 0.1,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-049",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "portal",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-05-07T11:21:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Renovación P&C — Clínica Iberia",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Clínica Iberia, dedicado a la actividad de clínica de cirugía estética, con sede en Madrid.\n\nSolicitan cobertura de Responsabilidad Civil Patronal, Responsabilidad Civil General, Responsabilidad Civil Productos con una suma asegurada aproximada de 6,051,902 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-049_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Clínica Iberia. CNAE 8621 — Clínica de cirugía estética. Ubicación: Madrid. Suma asegurada solicitada: 6051902 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.67."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Clínica Iberia",
+      "cnae_code": "8621",
+      "activity_description": "Clínica de cirugía estética",
+      "province": "Madrid",
+      "sum_insured_eur": 6051902,
+      "requested_coverages": [
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-01-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 51257
+        },
+        {
+          "fecha": "2022-08-03",
+          "tipo": "agua",
+          "importe_eur": 169718
+        }
+      ],
+      "loss_ratio": 0.67,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines; suma asegurada/límite (6,051,902 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-050",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "email",
+    "broker": "Correduría Andaluza S.A.",
+    "received_at": "2026-03-26T11:37:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríaandaluzas.a..es",
+      "subject": "Renovación P&C — Productora del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Productora del Sur, dedicado a la actividad de productora de eventos y espectáculos, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil General con una suma asegurada aproximada de 6,795,874 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Andaluza S.A."
+    },
+    "attachments": [
+      {
+        "filename": "SUB-050_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Productora del Sur. CNAE 9001 — Productora de eventos y espectáculos. Ubicación: Bilbao. Suma asegurada solicitada: 6795874 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.77."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Productora del Sur",
+      "cnae_code": "9001",
+      "activity_description": "Productora de eventos y espectáculos",
+      "province": "Bilbao",
+      "sum_insured_eur": 6795874,
+      "requested_coverages": [
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-05-28",
+          "tipo": "agua",
+          "importe_eur": 35576
+        }
+      ],
+      "loss_ratio": 0.77,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines; suma asegurada/límite (6,795,874 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-051",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro_incompleto",
+    "channel": "email",
+    "broker": "Howden Iberia",
+    "received_at": "2026-04-17T11:39:00Z",
+    "email_raw": {
+      "from": "suscripcion@howdeniberia.es",
+      "subject": "Nueva solicitud P&C — Empresa Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa Mediterráneo SL, dedicado a la actividad de empresa de limpieza industrial, con sede en Valencia.\n\nSolicitan cobertura de Responsabilidad Civil General con una suma asegurada aproximada de 3,015,991 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nHowden Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-051_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Mediterráneo SL. CNAE 8121 — Empresa de limpieza industrial. Ubicación: Valencia. Suma asegurada solicitada: 3015991 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.11."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Mediterráneo SL",
+      "cnae_code": null,
+      "activity_description": "Empresa de limpieza industrial",
+      "province": "Valencia",
+      "sum_insured_eur": 3015991,
+      "requested_coverages": [],
+      "loss_history": [],
+      "loss_ratio": 0.11,
+      "renewal": false
+    },
+    "missing_fields_expected": [
+      "cnae_code",
+      "requested_coverages"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): cnae_code, requested_coverages"
+  },
+  {
+    "submission_id": "SUB-052",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-04-20T16:18:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Renovación P&C — Empresa Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Norte SA, dedicado a la actividad de empresa de mantenimiento de ascensores, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil Patronal, Responsabilidad Civil General, Responsabilidad Civil Productos con una suma asegurada aproximada de 663,772 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-052_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Norte SA. CNAE 3312 — Empresa de mantenimiento de ascensores. Ubicación: Barcelona. Suma asegurada solicitada: 663772 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.32."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Norte SA",
+      "cnae_code": "3312",
+      "activity_description": "Empresa de mantenimiento de ascensores",
+      "province": "Barcelona",
+      "sum_insured_eur": 663772,
+      "requested_coverages": [
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-08-21",
+          "tipo": "incendio",
+          "importe_eur": 17445
+        },
+        {
+          "fecha": "2025-07-14",
+          "tipo": "incendio",
+          "importe_eur": 130021
+        }
+      ],
+      "loss_ratio": 0.32,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-053",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-06-09T13:09:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Nueva solicitud P&C — Consultora Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Consultora Mediterráneo SL, dedicado a la actividad de consultora de ingeniería civil, con sede en Málaga.\n\nSolicitan cobertura de Responsabilidad Civil Productos con una suma asegurada aproximada de 4,106,040 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-053_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Consultora Mediterráneo SL. CNAE 7112 — Consultora de ingeniería civil. Ubicación: Málaga. Suma asegurada solicitada: 4106040 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.26."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Consultora Mediterráneo SL",
+      "cnae_code": "7112",
+      "activity_description": "Consultora de ingeniería civil",
+      "province": "Málaga",
+      "sum_insured_eur": 4106040,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-12-04",
+          "tipo": "robo",
+          "importe_eur": 57867
+        },
+        {
+          "fecha": "2025-08-08",
+          "tipo": "rotura cristales",
+          "importe_eur": 90348
+        }
+      ],
+      "loss_ratio": 0.26,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-054",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-06-02T12:38:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Renovación P&C — Empresa Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Centro SL, dedicado a la actividad de empresa de instalaciones eléctricas, con sede en Alicante.\n\nSolicitan cobertura de Responsabilidad Civil General, Responsabilidad Civil Patronal, Responsabilidad Civil Productos con una suma asegurada aproximada de 6,061,472 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-054_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Centro SL. CNAE 4321 — Empresa de instalaciones eléctricas. Ubicación: Alicante. Suma asegurada solicitada: 6061472 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.07."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Centro SL",
+      "cnae_code": "4321",
+      "activity_description": "Empresa de instalaciones eléctricas",
+      "province": "Alicante",
+      "sum_insured_eur": 6061472,
+      "requested_coverages": [
+        "Responsabilidad Civil General",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-02-14",
+          "tipo": "incendio",
+          "importe_eur": 99187
+        }
+      ],
+      "loss_ratio": 0.07,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "suma asegurada/límite (6,061,472 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-055",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "portal",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-04-28T16:49:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Empresa Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Empresa Atlántico SA, dedicado a la actividad de empresa de limpieza industrial, con sede en Zaragoza.\n\nSolicitan cobertura de Responsabilidad Civil Productos con una suma asegurada aproximada de 2,921,011 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-055_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Atlántico SA. CNAE 8121 — Empresa de limpieza industrial. Ubicación: Zaragoza. Suma asegurada solicitada: 2921011 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.09."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Atlántico SA",
+      "cnae_code": "8121",
+      "activity_description": "Empresa de limpieza industrial",
+      "province": "Zaragoza",
+      "sum_insured_eur": 2921011,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2023-03-22",
+          "tipo": "rotura cristales",
+          "importe_eur": 60284
+        }
+      ],
+      "loss_ratio": 0.09,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-056",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro_incompleto",
+    "channel": "portal",
+    "broker": "Lockton Iberia",
+    "received_at": "2026-04-14T15:21:00Z",
+    "email_raw": {
+      "from": "suscripcion@locktoniberia.es",
+      "subject": "Renovación P&C — Empresa del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa del Sur, dedicado a la actividad de empresa de jardinería y paisajismo, con sede en Madrid.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil General con una suma asegurada aproximada de 7,165,462 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nLockton Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-056_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa del Sur. CNAE 8130 — Empresa de jardinería y paisajismo. Ubicación: Madrid. Suma asegurada solicitada: 7165462 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.26."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa del Sur",
+      "cnae_code": "8130",
+      "activity_description": "Empresa de jardinería y paisajismo",
+      "province": "Madrid",
+      "sum_insured_eur": null,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-10-22",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 9089
+        },
+        {
+          "fecha": "2023-05-23",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 90582
+        }
+      ],
+      "loss_ratio": 0.26,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-057",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "portal",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-05-04T13:27:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Productora Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Productora Norte SA, dedicado a la actividad de productora de eventos y espectáculos, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil Productos, Responsabilidad Civil Patronal, Responsabilidad Civil General con una suma asegurada aproximada de 1,620,444 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-057_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Productora Norte SA. CNAE 9001 — Productora de eventos y espectáculos. Ubicación: Bilbao. Suma asegurada solicitada: 1620444 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.57."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Productora Norte SA",
+      "cnae_code": "9001",
+      "activity_description": "Productora de eventos y espectáculos",
+      "province": "Bilbao",
+      "sum_insured_eur": 1620444,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-10-20",
+          "tipo": "incendio",
+          "importe_eur": 15291
+        },
+        {
+          "fecha": "2023-03-25",
+          "tipo": "robo",
+          "importe_eur": 14544
+        }
+      ],
+      "loss_ratio": 0.57,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-058",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-01-16T14:11:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Renovación P&C — Empresa Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Empresa Norte SA, dedicado a la actividad de empresa de seguridad privada, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil Productos, Responsabilidad Civil Patronal con una suma asegurada aproximada de 1,230,210 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-058_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Empresa Norte SA. CNAE 8010 — Empresa de seguridad privada. Ubicación: Bilbao. Suma asegurada solicitada: 1230210 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.72."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Empresa Norte SA",
+      "cnae_code": "8010",
+      "activity_description": "Empresa de seguridad privada",
+      "province": "Bilbao",
+      "sum_insured_eur": 1230210,
+      "requested_coverages": [
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil Patronal"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-09-22",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 13405
+        },
+        {
+          "fecha": "2023-07-20",
+          "tipo": "incendio",
+          "importe_eur": 3515
+        }
+      ],
+      "loss_ratio": 0.72,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-059",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_revision",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-01-11T10:51:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Nueva solicitud P&C — Clínica Iberia",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Clínica Iberia, dedicado a la actividad de clínica de cirugía estética, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil Profesional, Responsabilidad Civil Productos, Responsabilidad Civil Patronal, Responsabilidad Civil General con una suma asegurada aproximada de 1,383,688 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-059_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Clínica Iberia. CNAE 8621 — Clínica de cirugía estética. Ubicación: Barcelona. Suma asegurada solicitada: 1383688 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.66."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Clínica Iberia",
+      "cnae_code": "8621",
+      "activity_description": "Clínica de cirugía estética",
+      "province": "Barcelona",
+      "sum_insured_eur": 1383688,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional",
+        "Responsabilidad Civil Productos",
+        "Responsabilidad Civil Patronal",
+        "Responsabilidad Civil General"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2023-09-18",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 20394
+        },
+        {
+          "fecha": "2025-12-02",
+          "tipo": "rotura cristales",
+          "importe_eur": 6412
+        }
+      ],
+      "loss_ratio": 0.66,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-060",
+    "line_of_business": "casualty",
+    "scenario_tag": "casualty_dentro",
+    "channel": "email",
+    "broker": "Correduría Mediterránea de Seguros",
+    "received_at": "2026-02-11T10:04:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríamediterráneadeseguros.es",
+      "subject": "Nueva solicitud P&C — Despacho Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Despacho Norte SA, dedicado a la actividad de despacho de arquitectura, con sede en A Coruña.\n\nSolicitan cobertura de Responsabilidad Civil Profesional con una suma asegurada aproximada de 5,485,210 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Mediterránea de Seguros"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-060_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Despacho Norte SA. CNAE 7111 — Despacho de arquitectura. Ubicación: A Coruña. Suma asegurada solicitada: 5485210 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.34."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Despacho Norte SA",
+      "cnae_code": "7111",
+      "activity_description": "Despacho de arquitectura",
+      "province": "A Coruña",
+      "sum_insured_eur": 5485210,
+      "requested_coverages": [
+        "Responsabilidad Civil Profesional"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-02-14",
+          "tipo": "incendio",
+          "importe_eur": 65283
+        }
+      ],
+      "loss_ratio": 0.34,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  }
+]

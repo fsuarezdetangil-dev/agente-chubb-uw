@@ -1,0 +1,138 @@
+SNAPSHOT DEL REPOSITORIO agente-chubb-uw
+Generado el 2026-07-01 · Solo lectura (no se modificó ningún archivo del proyecto)
+
+Nota: no es un repositorio git (no existe carpeta .git). `git status` / `git log` no aplican.
+Herramienta usada: find + PowerShell Get-ChildItem (tree no disponible en el entorno).
+Exclusiones: node_modules, __pycache__, .git, *.pyc, .venv, venv
+
+======================================================================
+ÁRBOL DE DIRECTORIOS Y ARCHIVOS (tamaño en bytes)
+======================================================================
+
+agente-chubb-uw/
+├── .env                                          442   [SECRETO REAL — contiene API keys, NO reproducido]
+├── .env.example                                  550
+├── .gitignore                                     91
+├── .849C9593-D756-4E56-8D6E-42412F2A707B          63   [archivo marcador de OneDrive/sync]
+├── CLAUDE.md                                     1279   ( 36 líneas)
+├── README.md                                    1036   ( 22 líneas)
+├── requirements.txt                              204   ( 10 líneas)
+├── checkpoints.db                          185380864   [SQLite checkpointer LangGraph — 185 MB]
+│
+├── backend/
+│   ├── agent/
+│   │   ├── __init__.py                             0
+│   │   ├── state.py                             1463   ( 37 líneas)
+│   │   ├── graph.py                             5098   (134 líneas)
+│   │   ├── plan_node.py                         3178   ( 87 líneas)
+│   │   ├── intake_node.py                       2974   ( 84 líneas)
+│   │   ├── extraction_node.py                   5281   (138 líneas)
+│   │   ├── appetite_node.py                     4270   (119 líneas)
+│   │   ├── risk_node.py                         6529   (159 líneas)
+│   │   └── output_node.py                       8006   (178 líneas)
+│   ├── api/                                             [carpeta VACÍA]
+│   ├── kb/
+│   │   ├── raw/
+│   │   │   ├── appetite_guidelines_property_casualty.md   11600   (154 líneas)
+│   │   │   └── pricing_guidelines_property_casualty.md     7972   (110 líneas)
+│   │   ├── processed/                                   [carpeta VACÍA]
+│   │   └── index/                                       [ChromaDB persistente]
+│   │       ├── chroma.sqlite3                  483328
+│   │       └── 1ecc79ce-8e9f-40b6-802a-b81f5fd66285/
+│   │           ├── data_level0.bin            167600
+│   │           ├── header.bin                    100
+│   │           ├── length.bin                    400
+│   │           └── link_lists.bin                  0
+│   ├── prompts/
+│   │   ├── plan_node.md                         1448   ( 38 líneas)
+│   │   ├── intake_node.md                       1537   ( 40 líneas)
+│   │   ├── extraction_node.md                   2711   ( 59 líneas)
+│   │   ├── appetite_node.md                     2759   ( 48 líneas)
+│   │   ├── risk_node.md                         2115   ( 53 líneas)
+│   │   ├── output_node.md                       2861   ( 72 líneas)
+│   │   └── reflection_node.md                   2988   ( 74 líneas)
+│   ├── tools/
+│   │   ├── __init__.py                             0
+│   │   └── rag_retriever.py                     1964   ( 63 líneas)
+│   └── utils/
+│       ├── __init__.py                             0
+│       └── llm.py                                646   ( 21 líneas)  ← AzureChatOpenAI
+│
+├── context/
+│   ├── ARCHITECTURE.md                          6261   (142 líneas)
+│   ├── PROJECT_CONTEXT.md                       1494   ( 33 líneas)
+│   ├── DEVELOPMENT_PLAN.md                      3794   ( 77 líneas)
+│   ├── SESSION_LOG.md                           5144   ( 91 líneas)
+│   ├── DUDAS.md                                 2388   ( 54 líneas)
+│   └── artifacts/                                      [carpeta VACÍA]
+│
+├── data/
+│   ├── base/
+│   │   ├── schemas.py                           1185   ( 37 líneas)
+│   │   ├── appetite_guidelines_property_casualty.md   11600   (154 líneas)  [duplicado de kb/raw]
+│   │   └── pricing_guidelines_property_casualty.md     7972   (110 líneas)  [duplicado de kb/raw]
+│   └── samples/
+│       ├── submissions_property_30.json                66889
+│       ├── submissions_casualty_30.json                68342
+│       ├── submissions_edge_cases_12.json              28974
+│       ├── submissions_edge_cases_12_bak.json          28450   [backup]
+│       ├── submissions_synthetic_all_70.json          167027
+│       ├── submissions_synthetic_all_70_bak.json      163677   [backup]
+│       └── submissions_stratification_summary.json       454
+│
+├── evals/
+│   ├── evaluators.py                            8345   (206 líneas)
+│   ├── README.md                                2988   ( 76 líneas)
+│   ├── golden_dataset/                                 [carpeta VACÍA]
+│   ├── scripts/                                        [carpeta VACÍA]
+│   └── results/
+│       ├── e2e_20260630_124819.json            61845
+│       ├── e2e_20260630_133600.json            63989
+│       ├── e2e_20260630_134419.json            67020
+│       ├── e2e_20260630_134552.json            66836
+│       ├── e2e_20260630_140034.json            49623
+│       ├── e2e_20260630_140437.json            49548
+│       ├── e2e_20260630_140525.json            49645
+│       ├── e2e_20260630_145043.json            49434
+│       ├── e2e_20260701_090140.json            59143   [última pasada E2E]
+│       └── e2e_progress.log                     8457
+│
+├── observability/
+│   ├── langsmith/
+│   │   └── setup_langsmith.py                   2512   ( 74 líneas)
+│   ├── dashboards/                                     [carpeta VACÍA]
+│   └── span_analysis/                                  [carpeta VACÍA]
+│
+├── scripts/
+│   ├── index_kb.py                              2844   ( 94 líneas)
+│   ├── upload_dataset.py                        3375   (102 líneas)
+│   ├── run_langsmith_eval.py                    4496   (129 líneas)
+│   ├── run_e2e.py                              12478
+│   ├── analyze_e2e.py                           3449
+│   ├── smoke_test.py                            2364
+│   ├── smoke_test_hitl.py                       2573
+│   ├── probe_sub001.py                          2587
+│   ├── inspect_gt.py                            2064
+│   ├── fix_gt_incompleto.py                     1945
+│   ├── test_fase3a.py                           2826
+│   ├── test_fase3b.py                           4796
+│   ├── test_fase3c.py                           4910
+│   ├── test_fase3d.py                           5831
+│   └── test_fase3e.py                           4981
+│
+└── tests/                                              [árbol de carpetas VACÍO]
+    ├── test_agents/
+    ├── test_flows/
+    └── test_tools/
+
+======================================================================
+CARPETAS VACÍAS (andamiaje sin implementar)
+======================================================================
+backend/api/                 — sin FastAPI todavía (API_HOST/API_PORT en .env sin uso)
+backend/kb/processed/        — chunks intermedios (index_kb.py indexa directo desde raw/)
+context/artifacts/
+evals/golden_dataset/        — el golden dataset real vive en data/samples/*.json
+evals/scripts/
+observability/dashboards/
+observability/span_analysis/
+tests/ (test_agents, test_flows, test_tools) — NO hay tests unitarios; los "test_*" están en scripts/

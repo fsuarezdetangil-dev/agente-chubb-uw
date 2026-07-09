@@ -1,0 +1,15 @@
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-openai>=0.3.0
+langchain-community>=0.3.0
+langsmith>=0.1.0                             # solo para evals (run_langsmith_eval.py, upload_dataset.py)
+chromadb>=0.5.0
+openai>=1.0.0
+langgraph-checkpoint-sqlite>=2.0.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pandas>=2.0.0                                # datasets para upload_phoenix_dataset.py
+# Observabilidad — Phoenix Arize (sustituye a LangSmith para tracing)
+arize-phoenix-otel>=0.7.0                    # register() + cliente OTLP hacia app.phoenix.arize.com
+openinference-instrumentation-langchain>=0.1.53  # auto-instrumentación LangChain/LangGraph
+opentelemetry-sdk>=1.24.0                    # runtime OpenTelemetry requerido por las dos anteriores

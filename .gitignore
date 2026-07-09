@@ -1,0 +1,29 @@
+# Secretos — nunca commitear
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Base de datos de checkpoints LangGraph (estado HITL en ejecución)
+*.db
+
+# Vector store ChromaDB (se regenera con kb_builder)
+backend/kb/index/
+
+# Node (por si se añade UI en el futuro)
+node_modules/
+
+# IDEs
+.vscode/
+.idea/

@@ -1,0 +1,1451 @@
+[
+  {
+    "submission_id": "SUB-001",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro_incompleto",
+    "channel": "email",
+    "broker": "Gallagher España",
+    "received_at": "2026-01-24T15:34:00Z",
+    "email_raw": {
+      "from": "suscripcion@gallagherespaña.es",
+      "subject": "Renovación P&C — Oficinas Iberia",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Oficinas Iberia, dedicado a la actividad de oficinas de despacho de abogados, con sede en Valencia.\n\nSolicitan cobertura de Daños materiales, Rotura de maquinaria, Pérdida de beneficios con una suma asegurada aproximada de 5,243,118 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGallagher España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-001_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Oficinas Iberia. CNAE 6910 — Oficinas de despacho de abogados. Ubicación: Valencia. Suma asegurada solicitada: 5243118 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.33."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Oficinas Iberia",
+      "cnae_code": null,
+      "activity_description": "Oficinas de despacho de abogados",
+      "province": "Valencia",
+      "sum_insured_eur": 5243118,
+      "requested_coverages": [],
+      "loss_history": [
+        {
+          "fecha": "2022-03-23",
+          "tipo": "rotura cristales",
+          "importe_eur": 90694
+        }
+      ],
+      "loss_ratio": 0.33,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "cnae_code",
+      "requested_coverages"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): cnae_code, requested_coverages"
+  },
+  {
+    "submission_id": "SUB-002",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-04-09T15:40:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Renovación P&C — Clínica del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Clínica del Sur, dedicado a la actividad de clínica dental privada, con sede en Barcelona.\n\nSolicitan cobertura de Responsabilidad Civil de explotación, Daños materiales con una suma asegurada aproximada de 1,347,117 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-002_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Clínica del Sur. CNAE 8623 — Clínica dental privada. Ubicación: Barcelona. Suma asegurada solicitada: 1347117 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.08."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Clínica del Sur",
+      "cnae_code": "8623",
+      "activity_description": "Clínica dental privada",
+      "province": "Barcelona",
+      "sum_insured_eur": 1347117,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación",
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-11-20",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 152849
+        }
+      ],
+      "loss_ratio": 0.08,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-003",
+    "line_of_business": "property",
+    "scenario_tag": "property_fuera",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-02-09T10:15:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Nueva solicitud P&C — Almacén Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Almacén Centro SL, dedicado a la actividad de almacén de pirotecnia y artículos de fiesta, con sede en A Coruña.\n\nSolicitan cobertura de Rotura de maquinaria, Pérdida de beneficios con una suma asegurada aproximada de 7,297,025 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-003_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Almacén Centro SL. CNAE 2051 — Almacén de pirotecnia y artículos de fiesta. Ubicación: A Coruña. Suma asegurada solicitada: 7297025 EUR. Histórico de siniestros declarados: 5 casos en los últimos 3 años. Loss ratio histórico estimado: 0.97."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Almacén Centro SL",
+      "cnae_code": "2051",
+      "activity_description": "Almacén de pirotecnia y artículos de fiesta",
+      "province": "A Coruña",
+      "sum_insured_eur": 7297025,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-04-22",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 171378
+        },
+        {
+          "fecha": "2022-10-21",
+          "tipo": "agua",
+          "importe_eur": 141521
+        },
+        {
+          "fecha": "2023-03-15",
+          "tipo": "rotura cristales",
+          "importe_eur": 72265
+        },
+        {
+          "fecha": "2023-11-11",
+          "tipo": "incendio",
+          "importe_eur": 61543
+        },
+        {
+          "fecha": "2022-06-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 18850
+        }
+      ],
+      "loss_ratio": 0.97,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 2051) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-004",
+    "line_of_business": "property",
+    "scenario_tag": "property_fuera",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-01-24T12:32:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Depósito del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Depósito del Sur, dedicado a la actividad de depósito de combustibles y carburantes, con sede en Alicante.\n\nSolicitan cobertura de Daños materiales, Pérdida de beneficios, Responsabilidad Civil de explotación con una suma asegurada aproximada de 6,549,420 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-004_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Depósito del Sur. CNAE 5210 — Depósito de combustibles y carburantes. Ubicación: Alicante. Suma asegurada solicitada: 6549420 EUR. Histórico de siniestros declarados: 5 casos en los últimos 3 años. Loss ratio histórico estimado: 1.41."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Depósito del Sur",
+      "cnae_code": "5210",
+      "activity_description": "Depósito de combustibles y carburantes",
+      "province": "Alicante",
+      "sum_insured_eur": 6549420,
+      "requested_coverages": [
+        "Daños materiales",
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-10-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 58993
+        },
+        {
+          "fecha": "2023-09-16",
+          "tipo": "incendio",
+          "importe_eur": 13851
+        },
+        {
+          "fecha": "2022-03-21",
+          "tipo": "agua",
+          "importe_eur": 179884
+        },
+        {
+          "fecha": "2025-10-03",
+          "tipo": "rotura cristales",
+          "importe_eur": 101539
+        },
+        {
+          "fecha": "2025-09-09",
+          "tipo": "robo",
+          "importe_eur": 4509
+        }
+      ],
+      "loss_ratio": 1.41,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 5210) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-005",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-01-04T13:56:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Nueva solicitud P&C — Nave Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Nave Norte SA, dedicado a la actividad de nave de almacenamiento de productos químicos no inflamables, con sede en Valencia.\n\nSolicitan cobertura de Daños materiales, Responsabilidad Civil de explotación con una suma asegurada aproximada de 6,691,802 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-005_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Nave Norte SA. CNAE 4675 — Nave de almacenamiento de productos químicos no inflamables. Ubicación: Valencia. Suma asegurada solicitada: 6691802 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.65."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Nave Norte SA",
+      "cnae_code": "4675",
+      "activity_description": "Nave de almacenamiento de productos químicos no inflamables",
+      "province": "Valencia",
+      "sum_insured_eur": 6691802,
+      "requested_coverages": [
+        "Daños materiales",
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-11-10",
+          "tipo": "robo",
+          "importe_eur": 161137
+        }
+      ],
+      "loss_ratio": 0.65,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines; suma asegurada/límite (6,691,802 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-006",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro_incompleto",
+    "channel": "portal",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-06-10T14:42:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Centro del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Centro del Sur, dedicado a la actividad de centro de procesamiento de datos (data center), con sede en Alicante.\n\nSolicitan cobertura de Rotura de maquinaria, Responsabilidad Civil de explotación con una suma asegurada aproximada de 7,276,516 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-006_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Centro del Sur. CNAE 6311 — Centro de procesamiento de datos (data center). Ubicación: Alicante. Suma asegurada solicitada: 7276516 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.13."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Centro del Sur",
+      "cnae_code": "6311",
+      "activity_description": "Centro de procesamiento de datos (data center)",
+      "province": "Alicante",
+      "sum_insured_eur": null,
+      "requested_coverages": [],
+      "loss_history": [
+        {
+          "fecha": "2023-10-03",
+          "tipo": "incendio",
+          "importe_eur": 128899
+        }
+      ],
+      "loss_ratio": 0.13,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "requested_coverages",
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): requested_coverages, sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-007",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision",
+    "channel": "email",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-01-28T13:04:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Renovación P&C — Fábrica del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Fábrica del Sur, dedicado a la actividad de fábrica de envases de plástico, con sede en Sevilla.\n\nSolicitan cobertura de Daños materiales con una suma asegurada aproximada de 5,751,572 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-007_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Fábrica del Sur. CNAE 2222 — Fábrica de envases de plástico. Ubicación: Sevilla. Suma asegurada solicitada: 5751572 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.63."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Fábrica del Sur",
+      "cnae_code": "2222",
+      "activity_description": "Fábrica de envases de plástico",
+      "province": "Sevilla",
+      "sum_insured_eur": 5751572,
+      "requested_coverages": [
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-02-08",
+          "tipo": "agua",
+          "importe_eur": 18284
+        },
+        {
+          "fecha": "2024-01-19",
+          "tipo": "robo",
+          "importe_eur": 61823
+        }
+      ],
+      "loss_ratio": 0.63,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-008",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision",
+    "channel": "email",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-03-14T14:29:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Renovación P&C — Nave Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Nave Centro SL, dedicado a la actividad de nave de fabricación textil con maquinaria antigua, con sede en Murcia.\n\nSolicitan cobertura de Rotura de maquinaria, Daños materiales, Responsabilidad Civil de explotación, Pérdida de beneficios con una suma asegurada aproximada de 4,613,054 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-008_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Nave Centro SL. CNAE 1310 — Nave de fabricación textil con maquinaria antigua. Ubicación: Murcia. Suma asegurada solicitada: 4613054 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.56."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Nave Centro SL",
+      "cnae_code": "1310",
+      "activity_description": "Nave de fabricación textil con maquinaria antigua",
+      "province": "Murcia",
+      "sum_insured_eur": 4613054,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Daños materiales",
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-04-18",
+          "tipo": "agua",
+          "importe_eur": 151195
+        }
+      ],
+      "loss_ratio": 0.56,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-009",
+    "line_of_business": "property",
+    "scenario_tag": "property_fuera",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-01-25T11:10:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Nueva solicitud P&C — Depósito Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Depósito Centro SL, dedicado a la actividad de depósito de combustibles y carburantes, con sede en Barcelona.\n\nSolicitan cobertura de Daños materiales con una suma asegurada aproximada de 7,546,387 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-009_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Depósito Centro SL. CNAE 5210 — Depósito de combustibles y carburantes. Ubicación: Barcelona. Suma asegurada solicitada: 7546387 EUR. Histórico de siniestros declarados: 3 casos en los últimos 3 años. Loss ratio histórico estimado: 1.36."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Depósito Centro SL",
+      "cnae_code": "5210",
+      "activity_description": "Depósito de combustibles y carburantes",
+      "province": "Barcelona",
+      "sum_insured_eur": 7546387,
+      "requested_coverages": [
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-01-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 30144
+        },
+        {
+          "fecha": "2023-04-07",
+          "tipo": "robo",
+          "importe_eur": 119101
+        },
+        {
+          "fecha": "2023-07-06",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 122775
+        }
+      ],
+      "loss_ratio": 1.36,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 5210) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-010",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "portal",
+    "broker": "Correduría Mediterránea de Seguros",
+    "received_at": "2026-03-07T08:37:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríamediterráneadeseguros.es",
+      "subject": "Nueva solicitud P&C — Panadería del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Panadería del Sur, dedicado a la actividad de panadería industrial, con sede en Bilbao.\n\nSolicitan cobertura de Rotura de maquinaria, Responsabilidad Civil de explotación, Pérdida de beneficios con una suma asegurada aproximada de 3,709,248 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Mediterránea de Seguros"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-010_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Panadería del Sur. CNAE 1071 — Panadería industrial. Ubicación: Bilbao. Suma asegurada solicitada: 3709248 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.22."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Panadería del Sur",
+      "cnae_code": "1071",
+      "activity_description": "Panadería industrial",
+      "province": "Bilbao",
+      "sum_insured_eur": 3709248,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-01-06",
+          "tipo": "rotura cristales",
+          "importe_eur": 2065
+        }
+      ],
+      "loss_ratio": 0.22,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-011",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro_incompleto",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-04-22T17:36:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Planta Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Planta Atlántico SA, dedicado a la actividad de planta de fabricación de muebles de madera, con sede en A Coruña.\n\nSolicitan cobertura de Rotura de maquinaria, Daños materiales con una suma asegurada aproximada de 6,471,810 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-011_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Planta Atlántico SA. CNAE 3109 — Planta de fabricación de muebles de madera. Ubicación: A Coruña. Suma asegurada solicitada: 6471810 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.07."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Planta Atlántico SA",
+      "cnae_code": "3109",
+      "activity_description": "Planta de fabricación de muebles de madera",
+      "province": "A Coruña",
+      "sum_insured_eur": null,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-01-02",
+          "tipo": "robo",
+          "importe_eur": 126487
+        },
+        {
+          "fecha": "2023-01-17",
+          "tipo": "incendio",
+          "importe_eur": 50212
+        }
+      ],
+      "loss_ratio": 0.07,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-012",
+    "line_of_business": "property",
+    "scenario_tag": "property_fuera",
+    "channel": "email",
+    "broker": "Lockton Iberia",
+    "received_at": "2026-02-09T09:56:00Z",
+    "email_raw": {
+      "from": "suscripcion@locktoniberia.es",
+      "subject": "Renovación P&C — Almacén Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Almacén Centro SL, dedicado a la actividad de almacén de pirotecnia y artículos de fiesta, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil de explotación, Rotura de maquinaria, Daños materiales, Pérdida de beneficios con una suma asegurada aproximada de 4,685,419 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nLockton Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-012_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Almacén Centro SL. CNAE 2051 — Almacén de pirotecnia y artículos de fiesta. Ubicación: Bilbao. Suma asegurada solicitada: 4685419 EUR. Histórico de siniestros declarados: 5 casos en los últimos 3 años. Loss ratio histórico estimado: 1.55."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Almacén Centro SL",
+      "cnae_code": "2051",
+      "activity_description": "Almacén de pirotecnia y artículos de fiesta",
+      "province": "Bilbao",
+      "sum_insured_eur": 4685419,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación",
+        "Rotura de maquinaria",
+        "Daños materiales",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2023-11-23",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 64070
+        },
+        {
+          "fecha": "2024-07-05",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 121358
+        },
+        {
+          "fecha": "2024-02-01",
+          "tipo": "rotura cristales",
+          "importe_eur": 164333
+        },
+        {
+          "fecha": "2022-02-18",
+          "tipo": "agua",
+          "importe_eur": 134114
+        },
+        {
+          "fecha": "2024-03-12",
+          "tipo": "incendio",
+          "importe_eur": 65537
+        }
+      ],
+      "loss_ratio": 1.55,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "fuera",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-2_declinar",
+    "expected_hitl_trigger_reason": "Actividad fuera de apetito (CNAE 2051) o loss_ratio >0.85 según appetite_guidelines Sección 4"
+  },
+  {
+    "submission_id": "SUB-013",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-01-11T10:40:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Renovación P&C — Clínica Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Clínica Norte SA, dedicado a la actividad de clínica dental privada, con sede en Bilbao.\n\nSolicitan cobertura de Rotura de maquinaria con una suma asegurada aproximada de 1,197,882 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-013_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Clínica Norte SA. CNAE 8623 — Clínica dental privada. Ubicación: Bilbao. Suma asegurada solicitada: 1197882 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.24."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Clínica Norte SA",
+      "cnae_code": "8623",
+      "activity_description": "Clínica dental privada",
+      "province": "Bilbao",
+      "sum_insured_eur": 1197882,
+      "requested_coverages": [
+        "Rotura de maquinaria"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-05-20",
+          "tipo": "agua",
+          "importe_eur": 91384
+        },
+        {
+          "fecha": "2023-11-21",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 133989
+        }
+      ],
+      "loss_ratio": 0.24,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-014",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "portal",
+    "broker": "Correduría Andaluza S.A.",
+    "received_at": "2026-05-02T13:37:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríaandaluzas.a..es",
+      "subject": "Renovación P&C — Centro Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Centro Centro SL, dedicado a la actividad de centro de procesamiento de datos (data center), con sede en Málaga.\n\nSolicitan cobertura de Daños materiales con una suma asegurada aproximada de 2,497,440 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Andaluza S.A."
+    },
+    "attachments": [
+      {
+        "filename": "SUB-014_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Centro Centro SL. CNAE 6311 — Centro de procesamiento de datos (data center). Ubicación: Málaga. Suma asegurada solicitada: 2497440 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.31."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Centro Centro SL",
+      "cnae_code": "6311",
+      "activity_description": "Centro de procesamiento de datos (data center)",
+      "province": "Málaga",
+      "sum_insured_eur": 2497440,
+      "requested_coverages": [
+        "Daños materiales"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.31,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-015",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "portal",
+    "broker": "Howden Iberia",
+    "received_at": "2026-06-04T13:49:00Z",
+    "email_raw": {
+      "from": "suscripcion@howdeniberia.es",
+      "subject": "Nueva solicitud P&C — Consultoría del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Consultoría del Sur, dedicado a la actividad de consultoría de gestión, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil de explotación con una suma asegurada aproximada de 4,934,916 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nHowden Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-015_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Consultoría del Sur. CNAE 7022 — Consultoría de gestión. Ubicación: Bilbao. Suma asegurada solicitada: 4934916 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.2."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Consultoría del Sur",
+      "cnae_code": "7022",
+      "activity_description": "Consultoría de gestión",
+      "province": "Bilbao",
+      "sum_insured_eur": 4934916,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.2,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-016",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision_incompleto",
+    "channel": "email",
+    "broker": "Willis Towers Watson Iberia",
+    "received_at": "2026-03-10T11:14:00Z",
+    "email_raw": {
+      "from": "suscripcion@willistowerswatsoniberia.es",
+      "subject": "Renovación P&C — Nave Iberia",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Nave Iberia, dedicado a la actividad de nave de fabricación textil con maquinaria antigua, con sede en Bilbao.\n\nSolicitan cobertura de Rotura de maquinaria con una suma asegurada aproximada de 4,996,643 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nWillis Towers Watson Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-016_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Nave Iberia. CNAE 1310 — Nave de fabricación textil con maquinaria antigua. Ubicación: Bilbao. Suma asegurada solicitada: 4996643 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.84."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Nave Iberia",
+      "cnae_code": "1310",
+      "activity_description": "Nave de fabricación textil con maquinaria antigua",
+      "province": "Bilbao",
+      "sum_insured_eur": null,
+      "requested_coverages": [
+        "Rotura de maquinaria"
+      ],
+      "loss_history": null,
+      "loss_ratio": 0.84,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "loss_history",
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "revision",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): loss_history, sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-017",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Correduría Andaluza S.A.",
+    "received_at": "2026-01-04T17:27:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríaandaluzas.a..es",
+      "subject": "Renovación P&C — Consultoría del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Consultoría del Sur, dedicado a la actividad de consultoría de gestión, con sede en Zaragoza.\n\nSolicitan cobertura de Responsabilidad Civil de explotación con una suma asegurada aproximada de 498,511 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Andaluza S.A."
+    },
+    "attachments": [
+      {
+        "filename": "SUB-017_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Consultoría del Sur. CNAE 7022 — Consultoría de gestión. Ubicación: Zaragoza. Suma asegurada solicitada: 498511 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.12."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Consultoría del Sur",
+      "cnae_code": "7022",
+      "activity_description": "Consultoría de gestión",
+      "province": "Zaragoza",
+      "sum_insured_eur": 498511,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-05-28",
+          "tipo": "incendio",
+          "importe_eur": 74670
+        },
+        {
+          "fecha": "2024-11-17",
+          "tipo": "rotura cristales",
+          "importe_eur": 179631
+        }
+      ],
+      "loss_ratio": 0.12,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-018",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Correduría Andaluza S.A.",
+    "received_at": "2026-06-28T09:46:00Z",
+    "email_raw": {
+      "from": "suscripcion@correduríaandaluzas.a..es",
+      "subject": "Renovación P&C — Supermercado Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Supermercado Atlántico SA, dedicado a la actividad de supermercado de barrio, con sede en Alicante.\n\nSolicitan cobertura de Rotura de maquinaria, Daños materiales, Pérdida de beneficios con una suma asegurada aproximada de 3,199,833 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCorreduría Andaluza S.A."
+    },
+    "attachments": [
+      {
+        "filename": "SUB-018_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Supermercado Atlántico SA. CNAE 4711 — Supermercado de barrio. Ubicación: Alicante. Suma asegurada solicitada: 3199833 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.33."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Supermercado Atlántico SA",
+      "cnae_code": "4711",
+      "activity_description": "Supermercado de barrio",
+      "province": "Alicante",
+      "sum_insured_eur": 3199833,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Daños materiales",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-10-17",
+          "tipo": "incendio",
+          "importe_eur": 102476
+        },
+        {
+          "fecha": "2023-05-02",
+          "tipo": "rotura cristales",
+          "importe_eur": 1943
+        }
+      ],
+      "loss_ratio": 0.33,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-019",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "AON Risk Solutions España",
+    "received_at": "2026-03-10T11:27:00Z",
+    "email_raw": {
+      "from": "suscripcion@aonrisksolutionsespaña.es",
+      "subject": "Nueva solicitud P&C — Taller Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Taller Atlántico SA, dedicado a la actividad de taller de carpintería metálica, con sede en Sevilla.\n\nSolicitan cobertura de Pérdida de beneficios, Responsabilidad Civil de explotación, Rotura de maquinaria, Daños materiales con una suma asegurada aproximada de 7,850,140 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nAON Risk Solutions España"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-019_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Taller Atlántico SA. CNAE 2511 — Taller de carpintería metálica. Ubicación: Sevilla. Suma asegurada solicitada: 7850140 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.23."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Taller Atlántico SA",
+      "cnae_code": "2511",
+      "activity_description": "Taller de carpintería metálica",
+      "province": "Sevilla",
+      "sum_insured_eur": 7850140,
+      "requested_coverages": [
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación",
+        "Rotura de maquinaria",
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-06-13",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 146835
+        }
+      ],
+      "loss_ratio": 0.23,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "suma asegurada/límite (7,850,140 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-020",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-02-26T11:09:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Nueva solicitud P&C — Almacén Centro SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Almacén Centro SL, dedicado a la actividad de almacén logístico de distribución textil, con sede en Bilbao.\n\nSolicitan cobertura de Pérdida de beneficios con una suma asegurada aproximada de 6,891,422 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-020_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Almacén Centro SL. CNAE 5210 — Almacén logístico de distribución textil. Ubicación: Bilbao. Suma asegurada solicitada: 6891422 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.26."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Almacén Centro SL",
+      "cnae_code": "5210",
+      "activity_description": "Almacén logístico de distribución textil",
+      "province": "Bilbao",
+      "sum_insured_eur": 6891422,
+      "requested_coverages": [
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2024-08-15",
+          "tipo": "rotura cristales",
+          "importe_eur": 178611
+        },
+        {
+          "fecha": "2023-09-16",
+          "tipo": "agua",
+          "importe_eur": 174213
+        }
+      ],
+      "loss_ratio": 0.26,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "suma asegurada/límite (6,891,422 EUR) supera umbral de escalación de 6M EUR"
+  },
+  {
+    "submission_id": "SUB-021",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro_incompleto",
+    "channel": "email",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-01-25T14:14:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Renovación P&C — Almacén Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Almacén Mediterráneo SL, dedicado a la actividad de almacén logístico de distribución textil, con sede en A Coruña.\n\nSolicitan cobertura de Rotura de maquinaria, Responsabilidad Civil de explotación, Daños materiales, Pérdida de beneficios con una suma asegurada aproximada de 504,895 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-021_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Almacén Mediterráneo SL. CNAE 5210 — Almacén logístico de distribución textil. Ubicación: A Coruña. Suma asegurada solicitada: 504895 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.14."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Almacén Mediterráneo SL",
+      "cnae_code": "5210",
+      "activity_description": "Almacén logístico de distribución textil",
+      "province": "A Coruña",
+      "sum_insured_eur": null,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Responsabilidad Civil de explotación",
+        "Daños materiales",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": null,
+      "loss_ratio": 0.14,
+      "renewal": true
+    },
+    "missing_fields_expected": [
+      "loss_history",
+      "sum_insured_eur"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): loss_history, sum_insured_eur"
+  },
+  {
+    "submission_id": "SUB-022",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "portal",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-06-09T16:31:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Nueva solicitud P&C — Supermercado Norte SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Supermercado Norte SA, dedicado a la actividad de supermercado de barrio, con sede en Zaragoza.\n\nSolicitan cobertura de Rotura de maquinaria, Daños materiales, Pérdida de beneficios, Responsabilidad Civil de explotación con una suma asegurada aproximada de 1,775,444 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-022_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Supermercado Norte SA. CNAE 4711 — Supermercado de barrio. Ubicación: Zaragoza. Suma asegurada solicitada: 1775444 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.23."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Supermercado Norte SA",
+      "cnae_code": "4711",
+      "activity_description": "Supermercado de barrio",
+      "province": "Zaragoza",
+      "sum_insured_eur": 1775444,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Daños materiales",
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-09-08",
+          "tipo": "incendio",
+          "importe_eur": 121158
+        },
+        {
+          "fecha": "2023-08-22",
+          "tipo": "robo",
+          "importe_eur": 148018
+        }
+      ],
+      "loss_ratio": 0.23,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-023",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "portal",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-02-13T10:45:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Oficinas del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Oficinas del Sur, dedicado a la actividad de oficinas de despacho de abogados, con sede en Bilbao.\n\nSolicitan cobertura de Responsabilidad Civil de explotación, Pérdida de beneficios, Daños materiales con una suma asegurada aproximada de 5,557,546 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-023_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Oficinas del Sur. CNAE 6910 — Oficinas de despacho de abogados. Ubicación: Bilbao. Suma asegurada solicitada: 5557546 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.15."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Oficinas del Sur",
+      "cnae_code": "6910",
+      "activity_description": "Oficinas de despacho de abogados",
+      "province": "Bilbao",
+      "sum_insured_eur": 5557546,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios",
+        "Daños materiales"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.15,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-024",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Lockton Iberia",
+    "received_at": "2026-05-13T15:00:00Z",
+    "email_raw": {
+      "from": "suscripcion@locktoniberia.es",
+      "subject": "Nueva solicitud P&C — Planta Atlántico SA",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Planta Atlántico SA, dedicado a la actividad de planta de fabricación de muebles de madera, con sede en Alicante.\n\nSolicitan cobertura de Daños materiales, Rotura de maquinaria, Pérdida de beneficios, Responsabilidad Civil de explotación con una suma asegurada aproximada de 2,094,766 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nLockton Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-024_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Planta Atlántico SA. CNAE 3109 — Planta de fabricación de muebles de madera. Ubicación: Alicante. Suma asegurada solicitada: 2094766 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.2."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Planta Atlántico SA",
+      "cnae_code": "3109",
+      "activity_description": "Planta de fabricación de muebles de madera",
+      "province": "Alicante",
+      "sum_insured_eur": 2094766,
+      "requested_coverages": [
+        "Daños materiales",
+        "Rotura de maquinaria",
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.2,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-025",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision",
+    "channel": "portal",
+    "broker": "Grupo Aurea Broker",
+    "received_at": "2026-05-18T08:58:00Z",
+    "email_raw": {
+      "from": "suscripcion@grupoaureabroker.es",
+      "subject": "Nueva solicitud P&C — Nave Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Nave Mediterráneo SL, dedicado a la actividad de nave de almacenamiento de productos químicos no inflamables, con sede en Madrid.\n\nSolicitan cobertura de Rotura de maquinaria, Responsabilidad Civil de explotación, Daños materiales con una suma asegurada aproximada de 3,250,766 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nGrupo Aurea Broker"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-025_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Nave Mediterráneo SL. CNAE 4675 — Nave de almacenamiento de productos químicos no inflamables. Ubicación: Madrid. Suma asegurada solicitada: 3250766 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.75."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Nave Mediterráneo SL",
+      "cnae_code": "4675",
+      "activity_description": "Nave de almacenamiento de productos químicos no inflamables",
+      "province": "Madrid",
+      "sum_insured_eur": 3250766,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Responsabilidad Civil de explotación",
+        "Daños materiales"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-09-24",
+          "tipo": "robo",
+          "importe_eur": 159639
+        },
+        {
+          "fecha": "2023-08-08",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 115751
+        }
+      ],
+      "loss_ratio": 0.75,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines"
+  },
+  {
+    "submission_id": "SUB-026",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro_incompleto",
+    "channel": "email",
+    "broker": "Lockton Iberia",
+    "received_at": "2026-06-18T08:22:00Z",
+    "email_raw": {
+      "from": "suscripcion@locktoniberia.es",
+      "subject": "Nueva solicitud P&C — Hotel Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Hotel Mediterráneo SL, dedicado a la actividad de hotel urbano de 4 estrellas, con sede en Sevilla.\n\nSolicitan cobertura de Responsabilidad Civil de explotación, Pérdida de beneficios, Rotura de maquinaria con una suma asegurada aproximada de 3,605,281 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nLockton Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-026_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Hotel Mediterráneo SL. CNAE 5510 — Hotel urbano de 4 estrellas. Ubicación: Sevilla. Suma asegurada solicitada: 3605281 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.25."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Hotel Mediterráneo SL",
+      "cnae_code": "5510",
+      "activity_description": "Hotel urbano de 4 estrellas",
+      "province": "Sevilla",
+      "sum_insured_eur": null,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios",
+        "Rotura de maquinaria"
+      ],
+      "loss_history": null,
+      "loss_ratio": 0.25,
+      "renewal": false
+    },
+    "missing_fields_expected": [
+      "sum_insured_eur",
+      "loss_history"
+    ],
+    "appetite_expected": "dentro",
+    "complete_data_expected": false,
+    "expected_hitl_trigger": "HITL-1_datos_incompletos",
+    "expected_hitl_trigger_reason": "Campos faltantes detectados por data_validator(): sum_insured_eur, loss_history"
+  },
+  {
+    "submission_id": "SUB-027",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-01-19T08:59:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Hotel del Sur",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Hotel del Sur, dedicado a la actividad de hotel urbano de 4 estrellas, con sede en A Coruña.\n\nSolicitan cobertura de Responsabilidad Civil de explotación, Pérdida de beneficios, Daños materiales, Rotura de maquinaria con una suma asegurada aproximada de 2,180,911 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-027_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Hotel del Sur. CNAE 5510 — Hotel urbano de 4 estrellas. Ubicación: A Coruña. Suma asegurada solicitada: 2180911 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.07."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Hotel del Sur",
+      "cnae_code": "5510",
+      "activity_description": "Hotel urbano de 4 estrellas",
+      "province": "A Coruña",
+      "sum_insured_eur": 2180911,
+      "requested_coverages": [
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios",
+        "Daños materiales",
+        "Rotura de maquinaria"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-01-08",
+          "tipo": "agua",
+          "importe_eur": 6842
+        },
+        {
+          "fecha": "2023-04-05",
+          "tipo": "rotura cristales",
+          "importe_eur": 176994
+        }
+      ],
+      "loss_ratio": 0.07,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-028",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Marsh Madrid",
+    "received_at": "2026-01-28T14:52:00Z",
+    "email_raw": {
+      "from": "suscripcion@marshmadrid.es",
+      "subject": "Renovación P&C — Panadería Iberia",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Panadería Iberia, dedicado a la actividad de panadería industrial, con sede en A Coruña.\n\nSolicitan cobertura de Rotura de maquinaria, Responsabilidad Civil de explotación, Pérdida de beneficios con una suma asegurada aproximada de 2,916,887 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nMarsh Madrid"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-028_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Panadería Iberia. CNAE 1071 — Panadería industrial. Ubicación: A Coruña. Suma asegurada solicitada: 2916887 EUR. Histórico de siniestros declarados: 2 casos en los últimos 3 años. Loss ratio histórico estimado: 0.29."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Panadería Iberia",
+      "cnae_code": "1071",
+      "activity_description": "Panadería industrial",
+      "province": "A Coruña",
+      "sum_insured_eur": 2916887,
+      "requested_coverages": [
+        "Rotura de maquinaria",
+        "Responsabilidad Civil de explotación",
+        "Pérdida de beneficios"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2025-07-23",
+          "tipo": "agua",
+          "importe_eur": 21422
+        },
+        {
+          "fecha": "2023-02-23",
+          "tipo": "responsabilidad civil terceros",
+          "importe_eur": 158894
+        }
+      ],
+      "loss_ratio": 0.29,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-029",
+    "line_of_business": "property",
+    "scenario_tag": "property_dentro",
+    "channel": "email",
+    "broker": "Lockton Iberia",
+    "received_at": "2026-06-19T12:20:00Z",
+    "email_raw": {
+      "from": "suscripcion@locktoniberia.es",
+      "subject": "Renovación P&C — Taller Mediterráneo SL",
+      "body": "Buenos días,\n\nLes remito nueva renovación para nuestro cliente Taller Mediterráneo SL, dedicado a la actividad de taller de carpintería metálica, con sede en Murcia.\n\nSolicitan cobertura de Pérdida de beneficios, Responsabilidad Civil de explotación, Rotura de maquinaria, Daños materiales con una suma asegurada aproximada de 4,412,109 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nLockton Iberia"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-029_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Taller Mediterráneo SL. CNAE 2511 — Taller de carpintería metálica. Ubicación: Murcia. Suma asegurada solicitada: 4412109 EUR. Histórico de siniestros declarados: 0 casos en los últimos 3 años. Loss ratio histórico estimado: 0.2."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Taller Mediterráneo SL",
+      "cnae_code": "2511",
+      "activity_description": "Taller de carpintería metálica",
+      "province": "Murcia",
+      "sum_insured_eur": 4412109,
+      "requested_coverages": [
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación",
+        "Rotura de maquinaria",
+        "Daños materiales"
+      ],
+      "loss_history": [],
+      "loss_ratio": 0.2,
+      "renewal": true
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "dentro",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "STP_dentro_apetito",
+    "expected_hitl_trigger_reason": "Dentro de apetito, datos completos, sin factores de agravación — candidato a modo STP"
+  },
+  {
+    "submission_id": "SUB-030",
+    "line_of_business": "property",
+    "scenario_tag": "property_revision",
+    "channel": "email",
+    "broker": "Catalana de Riesgos Correduría",
+    "received_at": "2026-02-12T12:21:00Z",
+    "email_raw": {
+      "from": "suscripcion@catalanaderiesgoscorreduría.es",
+      "subject": "Nueva solicitud P&C — Fábrica del Sur",
+      "body": "Buenos días,\n\nLes remito nueva solicitud de nuevo seguro para nuestro cliente Fábrica del Sur, dedicado a la actividad de fábrica de envases de plástico, con sede en A Coruña.\n\nSolicitan cobertura de Daños materiales, Pérdida de beneficios, Responsabilidad Civil de explotación con una suma asegurada aproximada de 7,444,687 EUR.\n\nAdjunto memoria de actividad y cuestionario de suscripción.\n\nQuedamos a su disposición para cualquier aclaración.\n\nUn saludo,\nCatalana de Riesgos Correduría"
+    },
+    "attachments": [
+      {
+        "filename": "SUB-030_memoria_actividad.pdf",
+        "type": "memoria_actividad",
+        "extracted_text_summary": "Memoria de actividad de Fábrica del Sur. CNAE 2222 — Fábrica de envases de plástico. Ubicación: A Coruña. Suma asegurada solicitada: 7444687 EUR. Histórico de siniestros declarados: 1 casos en los últimos 3 años. Loss ratio histórico estimado: 0.78."
+      }
+    ],
+    "extracted_data_ground_truth": {
+      "company_name": "Fábrica del Sur",
+      "cnae_code": "2222",
+      "activity_description": "Fábrica de envases de plástico",
+      "province": "A Coruña",
+      "sum_insured_eur": 7444687,
+      "requested_coverages": [
+        "Daños materiales",
+        "Pérdida de beneficios",
+        "Responsabilidad Civil de explotación"
+      ],
+      "loss_history": [
+        {
+          "fecha": "2022-05-15",
+          "tipo": "agua",
+          "importe_eur": 123320
+        }
+      ],
+      "loss_ratio": 0.78,
+      "renewal": false
+    },
+    "missing_fields_expected": [],
+    "appetite_expected": "revision",
+    "complete_data_expected": true,
+    "expected_hitl_trigger": "HITL-3_referir_senior",
+    "expected_hitl_trigger_reason": "actividad clasificada 'requiere revisión' en appetite guidelines; suma asegurada/límite (7,444,687 EUR) supera umbral de escalación de 6M EUR"
+  }
+]
